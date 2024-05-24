@@ -3,19 +3,19 @@
 - Mon namespace est minh.
 
 - Créer un namespace :
-  `kubectl create namespace <nom-du-namespace> `
+  ```kubectl create namespace <nom-du-namespace> ```
 
 - Déployer RabbitMQ :
-  `kubectl create -f rabbitmq.yaml --namespace=<nom-du-namespace> `
+  ```kubectl create -f rabbitmq.yaml --namespace=<nom-du-namespace> ```
 
 - Déployer PostgreSQL :
-  `kubectl create -f database/postgresql.yaml --namespace=<nom-du-namespace>`
+  ```kubectl create -f database/postgresql.yaml --namespace=<nom-du-namespace>```
 
 - Déployer le serveur Node.js :
-  `kubectl create -f backend/deployment.yaml --namespace=<nom-du-namespace>`
+  ```kubectl create -f backend/deployment.yaml --namespace=<nom-du-namespace>```
 
 - Ajouter un autoscaler pour le serveur :
-  `kubectl autoscale deployment <nom-du-deploiement> --min=<nombre-minimum-de-replicas> --max=<nombre-maximum-de-replicas> --cpu-percent=<pourcentage-d-utilisation-de-CPU> --namespace=<nom-du-namespace> `
+  ```kubectl autoscale deployment <nom-du-deploiement> --min=<nombre-minimum-de-replicas> --max=<nombre-maximum-de-replicas> --cpu-percent=<pourcentage-d-utilisation-de-CPU> --namespace=<nom-du-namespace> ```
 
 - Vérifier les ressources déployées :
 
